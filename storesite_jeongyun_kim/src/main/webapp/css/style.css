@@ -1,0 +1,100 @@
+@charset "UTF-8";
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+body img{
+	object-fit: cover;
+}
+
+html {
+	font-size: 100%
+}
+
+.sort-button button{
+	margin-bottom: 5px;
+}
+header {
+	text-align: left;
+}
+
+a {
+	width: 200px;
+	height: auto;
+}
+
+.product {
+	display: flex;
+	gap: 20px;
+	padding: 15px;
+	border: 1px solid darkgoldenrod;
+	margin-bottom: 20px;
+	background-color: antiquewhite;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.product img {
+	width: 200px;
+	height: auto;
+	border-radius: 7px;
+
+}
+
+.product-name {
+	font-size: 24px;
+	font-weight: bold;
+	margin: 5px 0;
+}
+
+.product-price {
+	font-size: 20px;
+	margin: 5px 0;
+	text-align: left;
+}
+
+.product select,
+.product button {
+	padding: 4px;
+	font-size: 0.9em;
+	margin-left: 10px;
+	margin-right: 10px;
+	font-weight: bold;
+}
+
+.product button {
+	background-color: #ffd814;
+	border: 1px solid #fcd200;
+	border-radius: 15px;
+	cursor: pointer;
+}
+
+.contact {
+	padding: 20px;
+	background-color: #f0f0f0;
+	margin-top: 30px;
+}
+
+.contact form {
+	max-width: 500px;
+	left: 15px;
+}
+
+.contact label {
+	display: block;
+}
+
+.contact input,
+.contact textarea {
+	width: 100%;
+	padding: 8px;
+	margin-top: 5px;
+	margin-bottom: 15px;
+	border: 1px solid #ccc;
+}
+
+.contact button {
+	padding: 8px 16px;
+	background-color: #ccc;
+
+}
