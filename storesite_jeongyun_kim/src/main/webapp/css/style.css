@@ -3,89 +3,95 @@
 body {
   font-family: 'Noto Sans JP', sans-serif;
 }
-body img{
-	object-fit: cover;
-}
 
 html {
-	font-size: 100%
+  font-size: 100%;
 }
 
-.sort-button button{
-	margin-bottom: 5px;
-}
-header {
-	text-align: left;
+.sort-button button {		/*		並び替えボタンの下に少し余白をつける		*/
+  margin-bottom: 5px;
 }
 
-a {
-	width: 200px;
-	height: auto;
+header {						/*		ヘッダーの文字を左寄せ		*/
+  text-align: left;
 }
 
-.product {
-	display: flex;
-	gap: 20px;
-	padding: 15px;
-	border: 1px solid darkgoldenrod;
-	margin-bottom: 20px;
-	background-color: antiquewhite;
-	justify-content: space-between;
-	align-items: center;
+.product {						/*		商品を横並び（flex）で表示、枠線と背景色を設定		*/
+  display: flex;
+  gap: 20px;
+  padding: 15px;
+  border: 1px solid darkgoldenrod;
+  background-color: antiquewhite;
+  align-items: center;
 }
 
-.product img {
-	width: 200px;
-	height: auto;
-	border-radius: 7px;
-
+.product img {				/*		画像サイズと角丸を設定		*/
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
 }
 
-.product-name {
-	font-size: 24px;
-	font-weight: bold;
-	margin: 5px 0;
+.product-grid {				/*		商品名、価格、数量、ボタンを4列のグリッドで配置		*/
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  gap: 10px;
+  flex: 1;
 }
 
-.product-price {
-	font-size: 20px;
-	margin: 5px 0;
-	text-align: left;
+.product-name {			/*		フォントサイズ変更、１列配置		*/
+  font-size: 1.2em;
+  font-weight: bold;
+  grid-column: 1 / 2;
+}
+
+.product-price {				/*		テキスト寄せ、2例配置		*/
+  font-size: 1.1em;
+  margin: 5px 0;
+  color: #333;
+  text-align: left;
+  grid-column: 2 / 3;
+}
+
+.product-grid label {		/*		3例配置		*/
+  grid-column: 3 / 4;
+}
+
+.product-grid button {	/*		4例配置*/
+  grid-column: 4 / 5;
 }
 
 .product select,
-.product button {
-	padding: 4px;
-	font-size: 0.9em;
-	margin-left: 10px;
-	margin-right: 10px;
-	font-weight: bold;
+.product button {			/*数量選択ボックス*/
+  padding: 4px;
+  font-size: 0.9em;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-weight: bold;
 }
 
-.product button {
-	background-color: #ffd814;
-	border: 1px solid #fcd200;
-	border-radius: 15px;
-	cursor: pointer;
+.product button {			/*カートに追加ボタンの設定*/
+  padding: 6px 10px;
+  background-color: #ffd814;
+  border: 1px solid #fcd200;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-.contact {
+.contact {						/*お問い合わせフォームのカラーと余白設定*/
 	padding: 20px;
 	background-color: #f0f0f0;
 	margin-top: 30px;
 }
 
-.contact form {
+.contact form {				/*フォームの最大幅の制限*/
 	max-width: 500px;
-	left: 15px;
 }
 
-.contact label {
-	display: block;
-}
 
 .contact input,
-.contact textarea {
+.contact textarea {		/*幅、内側余白、上下スペース調整、枠線グレーにする*/
 	width: 100%;
 	padding: 8px;
 	margin-top: 5px;
@@ -93,8 +99,7 @@ a {
 	border: 1px solid #ccc;
 }
 
-.contact button {
+.contact button {			/*グレーの背景、ボタンの余白設定*/
 	padding: 8px 16px;
 	background-color: #ccc;
-
 }
